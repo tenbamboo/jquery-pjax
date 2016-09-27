@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	我是主页内容<br>
+
+	<div id="main"></div>
+
+	<script src="jquery.js"></script>
+	<script src="jquery.pjax.js"></script>
+	<script>
+		jQuery(document).ready(function($) {
+			$.pjax({
+				mainContainer:'main',
+				suffix:'html',
+				defaultLoad:'demo1'
+			})
+		});
+	</script>
+</body>
+</html>

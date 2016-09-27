@@ -1,0 +1,32 @@
+<title>我是Demo2</title>
+<div>
+	<p>我是Demo2</p>
+	<p>JS方式跳转</p>
+	<a id="goto3">我是直接可以跳转到demo3.html</a><br>
+	<a id="goto3ForParam">我是直接可以跳转到demo3.html,还可以带参数 </a><br>
+	<a id="goto3ForNotBack">我是直接可以跳转到demo3.html,但不可以回退</a><br>
+	<a id="back">返回</a>
+	<script>
+		jQuery(document).ready(function() {
+			
+			$('#goto3').click(function(){
+				$.pjax('load','demo3');
+			});
+			$('#goto3ForParam').click(function(){
+				$.pjax('load','demo3',{
+					param1:1,
+					param2:'hello would'
+				});
+			});
+			$('#goto3ForNotBack').click(function(){
+				$.pjax('load','demo3',{
+					param1:1,
+					param2:'hellowould'
+				},true);
+			});
+			$('#back').click(function(){
+				$.pjax('back');
+			});
+		});
+	</script>
+</div>
