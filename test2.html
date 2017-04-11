@@ -1,0 +1,12 @@
+<div>
+	我是test2页面<br><br>
+	<a id="back">点我回去</a><br><br>
+	<a id="test3">点我去test3</a><br><br>
+	<a id="test3NoBack">点我去test3且不记录路由，如果后退了应该返回上一个页面，也就是test1.html</a><br><br>
+</div>
+
+<script>
+	requirejs(['test2'],function(){
+		Test2.init();
+	});
+</script>

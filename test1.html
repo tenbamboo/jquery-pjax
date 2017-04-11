@@ -1,0 +1,14 @@
+<div>
+	我是test1页面<br><br>
+<!-- 	<a id="back">点我回去</a><br><br> -->
+	<a pa-href="test2">点我去test2</a><br><br>
+	<a id="test2">点我去test2(js方式)</a><br><br>
+	<a id="test2ForParam">点我去test2(js方式传参数)</a><br><br>
+	
+</div>
+
+<script>
+	requirejs(['test1'],function(){
+		Test1.init();
+	});
+</script>

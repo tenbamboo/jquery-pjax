@@ -1,23 +1,70 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-	<title></title>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<style>
+	.topBar{
+	width: 100%;
+    height: 42px;
+    background: #2196F3;
+    color: #fff;
+    line-height: 40px;
+	}
+	.leftBar{
+		float: left;
+	    width: 200px;
+	}
+	.leftBar ul{
+		border-right: 1px solid #c1c1c1;
+	}
+	
+	.leftBar li{
+	    padding: 15px;
+	    border-bottom: 1px solid #c1c1c1;
+	    position: relative;
+	    cursor: pointer;
+	}
+	
+	.mainContent{
+		float: right;
+	    width: calc(100% - 200px);
+	}
+	
+	</style>
 </head>
 <body>
-	我是主页内容<br>
 
-	<div id="main"></div>
-
-	<script src="jquery.js"></script>
-	<script src="jquery.pjax.js"></script>
-	<script>
-		jQuery(document).ready(function($) {
-			$.pjax({
-				mainContainer:'main',
-				suffix:'html',
-				defaultLoad:'demo1'
-			})
+	<div class="topBar clr">
+		我是topbar
+	</div>
+	<div class="leftBar">
+		<ul>
+			<li pa-href="test1"  >
+				<div>test1</div>
+			</li>
+			<li pa-href="test2"  >
+				<div>test2</div>
+			</li>
+			<li pa-href="test3">
+				<div>test3</div>
+			</li>
+		</ul>
+	</div>
+	<div id="mainContainer"  class="mainContent">
+	</div>
+	
+	
+	
+    <script src="lib/jquery.js"></script>
+    <script src="lib/jquery.pjax.js"></script>
+	<script src="lib/require.js"></script>
+	
+	<script type="text/javascript">
+		requirejs.config({
+			urlArgs:"v=1.0"
 		});
 	</script>
+	<script src="index.js"></script>
+	
 </body>
 </html>
